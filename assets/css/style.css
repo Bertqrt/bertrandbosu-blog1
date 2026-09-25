@@ -1,0 +1,110 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --paper: #faf7f2;
+  --ink: #23201b;
+  --ink-soft: #6b6558;
+  --accent: #2f5d50;
+  --line: #e4ded2;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 3rem;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-header { margin-bottom: 2.5rem; }
+
+.home-link {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.home-link:hover,
+.home-link:focus-visible { text-decoration: underline; }
+
+.intro { margin-bottom: 3rem; }
+
+.intro h1 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+.bio { max-width: 480px; margin-bottom: 1.25rem; }
+
+.social { display: flex; align-items: center; gap: 1rem; }
+
+.social a { color: var(--ink-soft); display: inline-flex; }
+
+.social a:hover,
+.social a:focus-visible { color: var(--accent); }
+
+.social a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.social svg { width: 20px; height: 20px; }
+
+.email { font-size: 0.85rem; color: var(--ink-soft); }
+
+.feed { display: flex; flex-direction: column; }
+
+.entry {
+  display: block;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.entry:first-child { border-top: none; }
+
+.entry:hover h2,
+.entry:focus-visible h2 { color: var(--accent); }
+
+.entry:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.meta { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem; }
+
+.entry h2 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  transition: color 0.15s ease;
+}
+
+.hook { color: var(--ink-soft); font-size: 0.95rem; max-width: 540px; }
+
+.post h1 {
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.post-content p { margin-bottom: 1.1rem; max-width: 560px; }
+
+.footer { margin-top: 3rem; font-size: 0.8rem; color: var(--ink-soft); }
+
+@media (max-width: 480px) {
+  .intro h1 { font-size: 1.6rem; }
+}
