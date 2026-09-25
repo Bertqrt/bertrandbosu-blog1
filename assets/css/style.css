@@ -6,6 +6,16 @@
   --ink-soft: #6b6558;
   --accent: #2f5d50;
   --line: #e4ded2;
+  --header-bg: rgba(250, 247, 242, 0.72);
+}
+
+[data-theme="dark"] {
+  --paper: #1b1815;
+  --ink: #f2ede4;
+  --ink-soft: #a89f8f;
+  --accent: #5fae97;
+  --line: #34302a;
+  --header-bg: rgba(27, 24, 21, 0.72);
 }
 
 body {
@@ -13,17 +23,31 @@ body {
   color: var(--ink);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .page {
   max-width: 640px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 3rem;
+  padding: 0 1.5rem 3rem;
 }
 
 a { color: inherit; text-decoration: none; }
 
-.site-header { margin-bottom: 2.5rem; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -1.5rem 2.5rem;
+  padding: 1.5rem;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
 
 .home-link {
   font-family: "Source Serif 4", serif;
@@ -34,6 +58,31 @@ a { color: inherit; text-decoration: none; }
 
 .home-link:hover,
 .home-link:focus-visible { text-decoration: underline; }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible { color: var(--accent); }
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.theme-toggle svg { width: 20px; height: 20px; }
+
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 
 .intro { margin-bottom: 3rem; }
 
@@ -47,11 +96,12 @@ a { color: inherit; text-decoration: none; }
 .bio { max-width: 480px; margin-bottom: 1.25rem; }
 
 .find-me {
+  font-family: "Space Mono", monospace;
   font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--accent);
   margin-bottom: 0.6rem;
 }
 
