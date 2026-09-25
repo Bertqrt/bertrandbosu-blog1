@@ -5,9 +5,15 @@ layout: default
 {% assign read_time = words | divided_by: 200 | at_least: 1 %}
 
 <article class="post">
+  <a href="{{ '/' | relative_url }}" class="nav-link back-link">&larr; All Thoughts</a>
+
   <p class="meta">{{ read_time }} min &middot; {{ page.date | date: "%b %-d, %Y" }}</p>
   <h1>{{ page.title }}</h1>
   <div class="post-content">
     {{ content }}
   </div>
+
+  {% if page.previous %}
+  <a href="{{ page.previous.url | relative_url }}" class="nav-link next-link">Next Thought &rarr;</a>
+  {% endif %}
 </article>
