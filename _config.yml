@@ -1,6 +1,6 @@
 title: Bertrand Bosu
 description: Notes on building, learning, and figuring things out.
-url: "/bertrandbosu-blog1"
-baseurl: ""
+url: "https://bertrandbosu.com"
+baseurl: "/bertrandbosu-blog1"
 permalink: /writing/:title/
 markdown: kramdown
