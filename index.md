@@ -28,7 +28,12 @@ layout: default
     {% assign words = post.content | strip_html | number_of_words %}
     {% assign read_time = words | divided_by: 200 | at_least: 1 %}
     <p class="meta">{{ read_time }} min &middot; {{ post.date | date: "%b %-d, %Y" }}</p>
-    <h2>{{ post.title }}</h2>
+    <div class="entry-header">
+      <h2>{{ post.title }}</h2>
+      {% if post.image %}
+      <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="entry-thumb" loading="lazy">
+      {% endif %}
+    </div>
     <p class="hook">{{ post.excerpt | strip_html }}</p>
   </a>
   {% endfor %}

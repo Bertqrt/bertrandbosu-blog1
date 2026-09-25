@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      .bg { fill: #1b1815; }
+      .letter { fill: #5fae97; }
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #faf7f2; }
+        .letter { fill: #2f5d50; }
+      }
+    </style>
+  </defs>
+  <rect class="bg" width="64" height="64" rx="16"/>
+  <!-- Clean, semi-stylised 'B' with modern editorial serif and geometric proportions -->
+  <path class="letter" fill-rule="evenodd" clip-rule="evenodd" d="M18 14h16c6.5 0 11.5 3.5 11.5 9.5 0 4-2.5 7-6.5 8.3 4.8 1.2 8 4.7 8 9.7 0 6.5-5.5 8.5-13 8.5H18V14zm8 7v7.5h8c3.5 0 5.5-1.5 5.5-3.8 0-2.3-2-3.7-5.5-3.7h-8zm0 13.5V43h8.5c4 0 6-1.6 6-4.2 0-2.6-2-4.3-6-4.3H26z"/>
+</svg>
