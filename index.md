@@ -10,6 +10,7 @@ layout: default
     This is where I write about what I'm learning, building, and thinking
     about, mostly unfiltered.
   </p>
+  <p class="find-me">Find Me</p>
   <p class="social">
     <a href="https://www.linkedin.com/in/bertbnk/" target="_blank" aria-label="LinkedIn">
       <svg viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-338.5C24.09 109.5 0 85.4 0 55.9 0 25.4 24.1 1 53.84 1c29.7 0 53.84 24.4 53.84 54.9 0 29.5-24.14 53.6-53.84 53.6zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
