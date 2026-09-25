@@ -56,15 +56,42 @@
     });
 
     var backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 400) {
+    var isScrollingToTop = false;
+
+    function getScrollPosition() {
+      return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    }
+
+    function checkScrollVisibility() {
+      if (isScrollingToTop) return;
+      if (getScrollPosition() > 400) {
         backToTop.classList.add('visible');
       } else {
         backToTop.classList.remove('visible');
       }
-    });
+    }
+
+    window.addEventListener('scroll', checkScrollVisibility, { passive: true });
+
     backToTop.addEventListener('click', function () {
+      isScrollingToTop = true;
+      backToTop.classList.remove('visible');
+      backToTop.blur();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      var interval = setInterval(function () {
+        if (getScrollPosition() <= 10) {
+          clearInterval(interval);
+          isScrollingToTop = false;
+          backToTop.classList.remove('visible');
+        }
+      }, 50);
+
+      setTimeout(function () {
+        clearInterval(interval);
+        isScrollingToTop = false;
+        checkScrollVisibility();
+      }, 1000);
     });
   </script>
 </body>

@@ -53,6 +53,16 @@ a { color: inherit; text-decoration: none; }
   font-family: "Source Serif 4", serif;
   font-weight: 600;
   font-size: 1.1rem;
+  color: var(--ink);
+  transition: color 0.15s ease;
+}
+
+[data-theme="dark"] .home-link {
+  color: #ffffff;
+}
+
+.home-link:hover,
+.home-link:focus-visible {
   color: var(--accent);
 }
 
