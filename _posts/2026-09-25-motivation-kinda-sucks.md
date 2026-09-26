@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Motivation kinda sucks"
-date: 2026-09-26 20:00:00 +0000
+date: 2026-09-25 20:00:00 +0000
 excerpt: "Motivation is basically a drug. Chasing a bigger hit isn't going to fix that."
-
 ---
 
 You're probably thinking, "what is this guy even talking about??" Honestly, I wasn't too sure myself. I went and did some digging, and I'll be upfront, I didn't come out the other side with some clean, definite answer. But I did find enough to actually explain why this keeps happening to me, and maybe why it's happening to you too.
