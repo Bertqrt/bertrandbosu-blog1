@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Start of Something, I guess"
+date: 2026-09-24 20:00:00 +0000
 ---
 
 I woke up this morning with that familiar itch to fix a problem that wasn't bothering me yesterday: getting this site online and figuring out what AI agents actually do once you pull them out of a browser tab.
