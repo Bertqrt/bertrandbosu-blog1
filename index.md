@@ -8,7 +8,7 @@ layout: default
     I'm Bert. Computer engineering student at the University of Ghana, into
     embedded systems and figuring out how to build things that actually work.
     This is where I write about what I'm learning, building, and thinking
-    about, mostly unfiltered.
+    about.
   </p>
   <p class="find-me">Find Me</p>
   <p class="social">
