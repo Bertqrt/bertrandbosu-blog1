@@ -27,7 +27,10 @@ layout: default
   <a class="entry" href="{{ post.url | relative_url }}">
     {% assign words = post.content | strip_html | number_of_words %}
     {% assign read_time = words | divided_by: 200 | at_least: 1 %}
-    <p class="meta">{{ read_time }} min &middot; {{ post.date | date: "%b %-d, %Y" }}</p>
+    <p class="meta">
+      {{ read_time }} min &middot; {{ post.date | date: "%b %-d, %Y" }}
+      {% if forloop.first %}<span class="new-label">New</span>{% endif %}
+    </p>
     <div class="entry-header">
       <h2>{{ post.title }}</h2>
       {% if post.image %}
