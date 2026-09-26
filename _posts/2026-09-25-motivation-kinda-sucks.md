@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Motivation kinda sucks"
-date: 2026-09-25 20:00:00 +0000
+date: 2026-09-26 20:00:00 +0000
 excerpt: "Motivation is basically a drug. Chasing a bigger hit isn't going to fix that."
 
 ---
