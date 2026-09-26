@@ -29,7 +29,7 @@ layout: default
     {% assign read_time = words | divided_by: 200 | at_least: 1 %}
     <p class="meta">
       {{ read_time }} min &middot; {{ post.date | date: "%b %-d, %Y" }}
-      {% if forloop.first %}<span class="new-label">New</span>{% endif %}
+      {% if forloop.first %}<span class="new-label" data-date="{{ post.date | date_to_xmlschema }}">New</span>{% endif %}
     </p>
     <div class="entry-header">
       <h2>{{ post.title }}</h2>
@@ -41,3 +41,13 @@ layout: default
   </a>
   {% endfor %}
 </div>
+
+<script>
+  document.querySelectorAll('.new-label').forEach(function (label) {
+    var postDate = new Date(label.dataset.date);
+    var hoursSince = (Date.now() - postDate) / (1000 * 60 * 60);
+    if (hoursSince > 24) {
+      label.remove();
+    }
+  });
+</script>
