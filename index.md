@@ -5,10 +5,7 @@ layout: default
 <section class="intro">
   <h1>Welcome</h1>
   <p class="bio">
-    I'm Bert. Computer engineering student at the University of Ghana, into
-    embedded systems and figuring out how to build things that actually work.
-    This is where I write about what I'm learning, building, and thinking
-    about.
+I'm Bert. I study computer engineering at UG and spend way too much time messing with embedded systems. This is where I dump what I'm learning, building, and thinking about, mostly unfiltered. Expect a mix of school stuff, side projects that half-work, and whatever's stuck in my head that week.
   </p>
   <p class="find-me">Find Me</p>
   <p class="social">
