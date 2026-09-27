@@ -1,5 +1,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 :root {
   --paper: #faf7f2;
   --ink: #23201b;
