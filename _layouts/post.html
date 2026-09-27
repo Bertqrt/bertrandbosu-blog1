@@ -13,7 +13,14 @@ layout: default
     {{ content }}
   </div>
 
-  {% if page.previous %}
-  <a href="{{ page.previous.url | relative_url }}" class="nav-link next-link">Next Thought &rarr;</a>
+  {% if page.next or page.previous %}
+  <div class="post-nav">
+    {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}" class="nav-link prev-link">&larr; Previous Thought</a>
+    {% endif %}
+    {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}" class="nav-link next-link">Next Thought &rarr;</a>
+    {% endif %}
+  </div>
   {% endif %}
 </article>
