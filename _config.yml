@@ -4,8 +4,6 @@ url: "https://bertqrt.github.io"
 baseurl: "/bertrandbosu-blog1"
 permalink: /writing/:title/
 markdown: kramdown
-exclude:
-  - CLAUDE.md
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
