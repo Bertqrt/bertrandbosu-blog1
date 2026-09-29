@@ -37,5 +37,15 @@ I'm not going to tell you the fear goes away, because it doesn't. We're all huma
 
 What changed for me is realizing its size is a **bad estimate**. It's telling you the stakes are huge when they're usually tiny. So start anyway, and adjust as you go.
 
+## So go make the mistake
+
+Here's the part I wish someone had told me earlier. A mistake isn't a judgement on you. It's just proof that you tried something, and most people never get that far.
+
+Every mistake I made on this website taught me something the tutorials didn't. Every awkward sentence I've ever said to someone turned into a story I can laugh about now. The mistakes I was so scared of are the exact reason I'm better at all of this than I was a few months ago.
+
+And on the other side of that fear is stuff you actually want. The person you haven't talked to yet. The project you keep putting off. The idea sitting in your head that could turn into something real.
+
+So, *chale*, send the message. Ask the question. Start the thing badly. You'll probably mess up something along the way, and that's fine. Trust me, you'll be so much further along than the version of you who waited until it felt safe.
+
 > Making mistakes is nothing to fear. Never starting is.
 {: .pull-quote}
