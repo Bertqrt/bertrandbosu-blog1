@@ -2,6 +2,7 @@
 layout: post
 title: "The fear of starting"
 date: 2026-09-29
+hook: "The fear of making a mistake stops us before we even begin. A thought from right before sleep, and what building this website taught me about it."
 ---
 
 I was about to sleep the other night and my thoughts were all over the place. I wasn't trying to come up with anything to post. I was just thinking about thinking, you know? Then a line from the theme song of an old cartoon I used to watch hit me:
