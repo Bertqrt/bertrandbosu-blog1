@@ -46,4 +46,35 @@ layout: default
       }
     });
   })();
+
+  (function () {
+    var bar = document.querySelector('.reading-progress-bar');
+    var content = document.querySelector('.post-content');
+    var header = document.querySelector('.site-header');
+    if (!bar || !content) return;
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      var rect = content.getBoundingClientRect();
+      var top = rect.top + scrollY - (header ? header.offsetHeight : 0);
+      var end = rect.bottom + scrollY - window.innerHeight;
+      var progress = end <= top ? 1 : (scrollY - top) / (end - top);
+      progress = Math.min(1, Math.max(0, progress));
+      bar.style.transform = 'scaleX(' + progress + ')';
+    }
+
+    function requestUpdate() {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    window.addEventListener('load', requestUpdate);
+    update();
+  })();
 </script>
