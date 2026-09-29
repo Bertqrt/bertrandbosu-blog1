@@ -6,3 +6,4 @@ permalink: /writing/:title/
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
