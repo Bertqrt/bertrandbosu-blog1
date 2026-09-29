@@ -1,0 +1,37 @@
+---
+layout: default
+title: RSS Feed
+permalink: /rss/
+---
+
+<section class="intro">
+  <p class="find-me">RSS Feed</p>
+  <h1>Follow along</h1>
+  <p class="bio">
+    Want new posts without having to check back here? Copy the link below and paste it into a feed reader app like Feedly, Inoreader or NetNewsWire. New Thoughts will show up there automatically.
+  </p>
+  <div class="feed-url">
+    <code>{{ '/feed.xml' | absolute_url }}</code>
+    <button class="copy-btn feed-copy" type="button" aria-label="Copy feed link">Copy</button>
+  </div>
+  <a href="{{ '/' | relative_url }}" class="nav-link">&larr; Back to all Thoughts</a>
+</section>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.feed-copy');
+    if (!btn) return;
+    if (!navigator.clipboard) { btn.remove(); return; }
+    btn.addEventListener('click', function () {
+      var url = document.querySelector('.feed-url code').textContent;
+      navigator.clipboard.writeText(url).then(function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 1800);
+      }).catch(function () {});
+    });
+  })();
+</script>
