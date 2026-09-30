@@ -504,3 +504,10 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 480px) {
   .intro h1 { font-size: 2.1rem; }
 }
+
+/* Desktop screens have room to breathe: scale everything up a bit
+   so the page doesn't look zoomed out. Mobile/tablet stay untouched. */
+@media (min-width: 1024px) {
+  html { font-size: 118%; }
+  .page { max-width: 760px; }
+}
