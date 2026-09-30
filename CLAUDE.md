@@ -3,6 +3,7 @@
 ## Git workflow
 
 - Push changes directly to `main` unless the user explicitly asks not to. The live site (GitHub Pages) builds from `main`.
+- After every change, give Bert the live site link: https://bertqrt.github.io/bertrandbosu-blog1/ (plus a direct link to the specific page that changed, when there is one).
 
 ## Writing workflow
 
