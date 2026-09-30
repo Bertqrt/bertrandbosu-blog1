@@ -9,3 +9,12 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
+
+# Default share-preview image for links posted on WhatsApp, LinkedIn, X, etc.
+# A post can override it with its own `image:` in the front matter.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-default.png

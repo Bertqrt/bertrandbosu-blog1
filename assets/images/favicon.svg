@@ -2,10 +2,10 @@
   <defs>
     <style>
       .bg { fill: #1b1815; }
-      .letter { fill: #5fae97; }
+      .letter { fill: #f2ede4; }
       @media (prefers-color-scheme: light) {
         .bg { fill: #faf7f2; }
-        .letter { fill: #2f5d50; }
+        .letter { fill: #23201b; }
       }
     </style>
   </defs>

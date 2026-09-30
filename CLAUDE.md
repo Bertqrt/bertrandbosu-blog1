@@ -28,4 +28,4 @@ New posts ("Thoughts") go through these steps, in order:
 - Posts live in `_posts/` and need `layout: post` in their front matter.
 - All styling is in `assets/css/style.css`. Colors are CSS variables on `:root` with dark mode overrides under `[data-theme="dark"]`; reuse them so new UI matches both themes.
 - Fonts: Source Serif 4 (headings), Inter (body), Space Mono (small uppercase labels and code).
-- Only use plugins GitHub Pages supports (currently `jekyll-seo-tag`, `jekyll-feed`).
+- Only use plugins GitHub Pages supports (currently `jekyll-seo-tag`, `jekyll-feed`, `jekyll-sitemap`).
