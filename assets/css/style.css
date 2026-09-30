@@ -10,7 +10,11 @@ a, button {
   --ink-soft: #6b6558;
   --accent: #2f5d50;
   --line: #e4ded2;
-  --header-bg: rgba(250, 247, 242, 0.72);
+  --header-bg: rgba(250, 247, 242, 0.6);
+  --glass-tint: rgba(250, 247, 242, 0.45);
+  --glass-rim: rgba(255, 255, 255, 0.8);
+  --glass-edge: rgba(35, 32, 27, 0.1);
+  --glass-shadow: rgba(35, 32, 27, 0.12);
   --code-bg: #f2ede4;
   --code-string: #9a5b2e;
 }
@@ -21,7 +25,11 @@ a, button {
   --ink-soft: #a89f8f;
   --accent: #5fae97;
   --line: #34302a;
-  --header-bg: rgba(27, 24, 21, 0.72);
+  --header-bg: rgba(27, 24, 21, 0.58);
+  --glass-tint: rgba(42, 38, 33, 0.45);
+  --glass-rim: rgba(255, 255, 255, 0.12);
+  --glass-edge: rgba(255, 255, 255, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.4);
   --code-bg: #24201c;
   --code-string: #d9a066;
 }
@@ -51,10 +59,15 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
   margin: 0 -1.5rem 2.5rem;
   padding: 1.5rem;
-  background: var(--header-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+  /* Liquid glass: blur + saturation so scrolled text tints through,
+     a bright rim just above the edge, and a soft lift off the page. */
+  background: linear-gradient(to bottom, var(--header-bg), var(--glass-tint));
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--glass-edge);
+  box-shadow:
+    inset 0 -1px 0 var(--glass-rim),
+    0 8px 24px -16px var(--glass-shadow);
 }
 
 .home-link {
@@ -115,6 +128,7 @@ a { color: inherit; text-decoration: none; }
   height: 100%;
   background: var(--accent);
   border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 8px var(--accent);
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition: transform 0.1s linear;
@@ -412,9 +426,16 @@ a { color: inherit; text-decoration: none; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--accent);
-  color: var(--paper);
-  border: none;
+  background: var(--glass-tint);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  color: var(--accent);
+  border: 1px solid var(--glass-edge);
+  box-shadow:
+    inset 0 1px 1px var(--glass-rim),
+    inset 0 -1px 2px var(--glass-edge),
+    0 6px 16px var(--glass-shadow),
+    0 1px 3px var(--glass-shadow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,6 +445,18 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(8px);
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 30;
+  overflow: hidden;
+}
+
+/* Specular shine across the top of the bubble */
+.back-to-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(120% 70% at 30% 0%, var(--glass-rim), transparent 55%);
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .back-to-top.visible {
@@ -432,15 +465,21 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(0);
 }
 
-.back-to-top:hover,
-.back-to-top:focus-visible { opacity: 0.85; }
+.back-to-top.visible:hover,
+.back-to-top.visible:focus-visible { transform: translateY(0) scale(1.06); }
 
 .back-to-top:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
 
-.back-to-top svg { width: 20px; height: 20px; }
+.back-to-top svg { width: 20px; height: 20px; position: relative; }
+
+/* Browsers without backdrop-filter get solid versions instead */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header { background: var(--paper); }
+  .back-to-top { background: var(--paper); }
+}
 
 .theme-toggle,
 .social a,
