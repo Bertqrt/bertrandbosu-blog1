@@ -54,10 +54,12 @@ I'm Bert. I study computer engineering at UG and spend way too much time messing
 </div>
 
 <script>
+  // Show "New" on the latest post for 3 days after its date.
+  var NEW_LABEL_DAYS = 3;
   document.querySelectorAll('.new-label').forEach(function (label) {
     var postDate = new Date(label.dataset.date);
-    var hoursSince = (Date.now() - postDate) / (1000 * 60 * 60);
-    if (hoursSince > 24) {
+    var daysSince = (Date.now() - postDate) / (1000 * 60 * 60 * 24);
+    if (daysSince > NEW_LABEL_DAYS) {
       label.remove();
     }
   });
