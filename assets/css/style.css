@@ -88,107 +88,6 @@ a { color: inherit; text-decoration: none; }
   border-radius: 2px;
 }
 
-/* Header name folds into its "B" while scrolling down (see default.html).
-   Letters fold right to left on the way in and open left to right on the
-   way out, each one swinging shut like a page and giving up its width. */
-.home-link {
-  display: inline-flex;
-  align-items: baseline;
-  white-space: nowrap;
-  perspective: 500px;
-}
-
-.home-link .fold-lead {
-  display: inline-block;
-  position: relative;
-}
-
-.home-link .fold-letter {
-  display: inline-block;
-  transition: opacity 0.2s ease 0.1s, transform 0.3s cubic-bezier(0.65, 0, 0.35, 1) 0.1s;
-}
-
-/* The site icon, same shape and colors as favicon.svg. It sits over the
-   "B" and takes its place once the rest of the name has folded away. */
-.home-link .fold-mark {
-  position: absolute;
-  left: -0.15em;
-  top: 50%;
-  width: 2.1em;
-  height: 2.1em;
-  opacity: 0;
-  transform: translateY(-50%) scale(0.4) rotate(-12deg);
-  transform-origin: 30% 50%;
-  pointer-events: none;
-  transition: opacity 0.18s ease, transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.home-link .fold-mark-bg { fill: var(--accent); transition: fill 0.15s ease; }
-.home-link .fold-mark-letter { fill: var(--paper); }
-
-.home-link.folded .fold-letter {
-  opacity: 0;
-  transform: scale(0.6);
-  transition-delay: calc(var(--n) * 14ms + 0.2s);
-}
-
-.home-link.folded .fold-mark {
-  opacity: 1;
-  transform: translateY(-50%) scale(1) rotate(0deg);
-  pointer-events: auto;
-  transition:
-    opacity 0.25s ease calc(var(--n) * 14ms + 0.2s),
-    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) calc(var(--n) * 14ms + 0.2s);
-}
-
-.home-link.folded:hover .fold-mark-bg { fill: var(--ink); }
-
-.home-link .fold-char {
-  --ease: cubic-bezier(0.65, 0, 0.35, 1);
-  --d: calc(var(--i) * 14ms);
-  display: inline-block;
-  white-space: pre;
-  width: var(--w, auto);
-  transform-origin: 0 50%;
-  /* Opening: make room first, then swing the letter in */
-  transition:
-    width 0.4s var(--ease) var(--d),
-    transform 0.45s var(--ease) calc(var(--d) + 0.1s),
-    opacity 0.3s ease calc(var(--d) + 0.12s);
-}
-
-.home-link.folded .fold-char {
-  --d: calc((var(--n) - var(--i)) * 14ms);
-  width: 0;
-  opacity: 0;
-  transform: rotateY(-90deg);
-  /* Folding: swing the letter away first, then close the gap */
-  transition:
-    width 0.4s var(--ease) calc(var(--d) + 0.12s),
-    transform 0.45s var(--ease) var(--d),
-    opacity 0.25s ease var(--d);
-}
-
-/* Keyboard users tabbing to the name get the full name back */
-.home-link.folded:focus-visible .fold-char,
-.home-link.folded:focus-visible .fold-letter {
-  width: var(--w, auto);
-  opacity: 1;
-  transform: none;
-}
-
-.home-link.folded:focus-visible .fold-mark { opacity: 0; }
-
-.home-link.fold-instant .fold-char,
-.home-link.fold-instant .fold-letter,
-.home-link.fold-instant .fold-mark { transition: none; }
-
-@media (prefers-reduced-motion: reduce) {
-  .home-link .fold-char,
-  .home-link .fold-letter,
-  .home-link .fold-mark { transition: none; }
-}
-
 .theme-toggle {
   background: none;
   border: none;
@@ -613,4 +512,7 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 1024px) {
   html { font-size: 118%; }
   .page { max-width: 760px; }
+  /* ...except the header, which only needs to be a slim bar */
+  .site-header { padding-top: 1rem; padding-bottom: 1rem; margin-bottom: 2rem; }
+  .home-link { font-size: 1rem; }
 }

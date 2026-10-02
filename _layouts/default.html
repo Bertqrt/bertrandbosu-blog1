@@ -35,7 +35,7 @@
 <body>
   <div class="page">
     <header class="site-header">
-      <a href="{{ '/' | relative_url }}" class="home-link" aria-label="Bertrand Bosu, home">Bertrand Bosu</a>
+      <a href="{{ '/' | relative_url }}" class="home-link">Bertrand Bosu</a>
 
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -76,98 +76,6 @@
       html.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
     });
-
-    // Fold the header name down to its "B" on the way down the page,
-    // and unfold it again on the way back up.
-    (function () {
-      var link = document.querySelector('.home-link');
-      var text = link.textContent;
-      var tail = [];
-      link.textContent = '';
-      for (var i = 0; i < text.length; i++) {
-        var ch = document.createElement('span');
-        ch.className = i === 0 ? 'fold-lead' : 'fold-char';
-        ch.setAttribute('aria-hidden', 'true');
-        ch.textContent = text[i];
-        if (i === 0) {
-          // Once folded, the leading letter turns into the site icon
-          ch.innerHTML = '<span class="fold-letter">' + text[0] + '</span>' +
-            '<svg class="fold-mark" viewBox="0 0 64 64">' +
-            '<rect class="fold-mark-bg" width="64" height="64" rx="12"/>' +
-            '<path class="fold-mark-letter" fill-rule="evenodd" d="M12 26L21 8H33A11 11 0 0 1 44 19V23A11 11 0 0 1 41.86 29.53A12 12 0 0 1 48 40V44A12 12 0 0 1 36 56H12Z M24 16H30A4 4 0 0 1 30 24H24Z M24 36H34A4 4 0 0 1 34 44H24Z"/>' +
-            '</svg>';
-        }
-        if (i > 0) {
-          ch.style.setProperty('--i', i);
-          tail.push(ch);
-        }
-        link.appendChild(ch);
-      }
-      link.style.setProperty('--n', text.length);
-
-      // Each letter needs a real width so it can shrink to zero smoothly
-      function measure() {
-        var wasFolded = link.classList.contains('folded');
-        link.classList.add('fold-instant');
-        link.classList.remove('folded');
-        tail.forEach(function (ch) { ch.style.removeProperty('--w'); });
-        tail.forEach(function (ch) {
-          ch.style.setProperty('--w', ch.getBoundingClientRect().width + 'px');
-        });
-        link.classList.toggle('folded', wasFolded);
-        link.offsetWidth;
-        link.classList.remove('fold-instant');
-      }
-
-      function setFolded(fold) {
-        link.classList.toggle('folded', fold);
-      }
-
-      var FOLD_AT = 120;
-      var UNFOLD_AFTER = 150;
-      var lastY = getScrollPosition();
-      var upTravel = 0;
-      var ticking = false;
-
-      function update() {
-        ticking = false;
-        var y = getScrollPosition();
-        var dy = y - lastY;
-        lastY = y;
-        if (y < FOLD_AT) {
-          upTravel = 0;
-          setFolded(false);
-        } else if (dy > 0) {
-          upTravel = 0;
-          setFolded(true);
-        } else if (dy < 0) {
-          upTravel -= dy;
-          if (upTravel > UNFOLD_AFTER) setFolded(false);
-        }
-      }
-
-      measure();
-      if (lastY >= FOLD_AT) {
-        link.classList.add('fold-instant', 'folded');
-        link.offsetWidth;
-        link.classList.remove('fold-instant');
-      }
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
-      // Mobile browsers fire resize when the toolbar hides mid-scroll,
-      // so only re-measure when the width really changes
-      var lastWidth = window.innerWidth;
-      window.addEventListener('resize', function () {
-        if (window.innerWidth === lastWidth) return;
-        lastWidth = window.innerWidth;
-        measure();
-      });
-      window.addEventListener('scroll', function () {
-        if (!ticking) {
-          ticking = true;
-          window.requestAnimationFrame(update);
-        }
-      }, { passive: true });
-    })();
 
     var backToTop = document.getElementById('back-to-top');
     var isScrollingToTop = false;
