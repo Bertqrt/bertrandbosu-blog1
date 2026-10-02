@@ -112,10 +112,10 @@ a { color: inherit; text-decoration: none; }
    "B" and takes its place once the rest of the name has folded away. */
 .home-link .fold-mark {
   position: absolute;
-  left: -0.1em;
+  left: -0.15em;
   top: 50%;
-  width: 1.7em;
-  height: 1.7em;
+  width: 2.1em;
+  height: 2.1em;
   opacity: 0;
   transform: translateY(-50%) scale(0.4) rotate(-12deg);
   transform-origin: 30% 50%;
