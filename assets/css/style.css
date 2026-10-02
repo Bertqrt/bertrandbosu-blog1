@@ -88,6 +88,57 @@ a { color: inherit; text-decoration: none; }
   border-radius: 2px;
 }
 
+/* Header name folds into its "B" while scrolling down (see default.html).
+   Letters fold right to left on the way in and open left to right on the
+   way out, each one swinging shut like a page and giving up its width. */
+.home-link {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+  perspective: 500px;
+}
+
+.home-link .fold-lead { display: inline-block; }
+
+.home-link .fold-char {
+  --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --d: calc(var(--i) * 14ms);
+  display: inline-block;
+  white-space: pre;
+  width: var(--w, auto);
+  transform-origin: 0 50%;
+  /* Opening: make room first, then swing the letter in */
+  transition:
+    width 0.4s var(--ease) var(--d),
+    transform 0.45s var(--ease) calc(var(--d) + 0.1s),
+    opacity 0.3s ease calc(var(--d) + 0.12s);
+}
+
+.home-link.folded .fold-char {
+  --d: calc((var(--n) - var(--i)) * 14ms);
+  width: 0;
+  opacity: 0;
+  transform: rotateY(-90deg);
+  /* Folding: swing the letter away first, then close the gap */
+  transition:
+    width 0.4s var(--ease) calc(var(--d) + 0.12s),
+    transform 0.45s var(--ease) var(--d),
+    opacity 0.25s ease var(--d);
+}
+
+/* Keyboard users tabbing to the name get the full name back */
+.home-link.folded:focus-visible .fold-char {
+  width: var(--w, auto);
+  opacity: 1;
+  transform: none;
+}
+
+.home-link.fold-instant .fold-char { transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-link .fold-char { transition: none; }
+}
+
 .theme-toggle {
   background: none;
   border: none;
