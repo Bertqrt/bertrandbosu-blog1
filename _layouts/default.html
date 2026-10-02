@@ -89,6 +89,14 @@
         ch.className = i === 0 ? 'fold-lead' : 'fold-char';
         ch.setAttribute('aria-hidden', 'true');
         ch.textContent = text[i];
+        if (i === 0) {
+          // Once folded, the leading letter turns into the site icon
+          ch.innerHTML = '<span class="fold-letter">' + text[0] + '</span>' +
+            '<svg class="fold-mark" viewBox="0 0 64 64">' +
+            '<rect class="fold-mark-bg" width="64" height="64" rx="12"/>' +
+            '<path class="fold-mark-letter" fill-rule="evenodd" d="M12 26L21 8H33A11 11 0 0 1 44 19V23A11 11 0 0 1 41.86 29.53A12 12 0 0 1 48 40V44A12 12 0 0 1 36 56H12Z M24 16H30A4 4 0 0 1 30 24H24Z M24 36H34A4 4 0 0 1 34 44H24Z"/>' +
+            '</svg>';
+        }
         if (i > 0) {
           ch.style.setProperty('--i', i);
           tail.push(ch);
