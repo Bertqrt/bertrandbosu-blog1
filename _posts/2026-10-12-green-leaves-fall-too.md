@@ -73,7 +73,7 @@ Matthea calls them *the many tried and true others*, and some of them really are
 
 Mine is sticking to what I already know. Almost everything I build runs on an Arduino or an ESP32: a smart waste bin, an RFID access lock with an MFRC522. The moment something needs a Raspberry Pi, like the OCR reading wand I want to make, I quietly push it aside, because I don't know how to use one. Arduinos aren't bad. They're just familiar, and that's exactly why I keep reaching for them.
 
-To a six-year-old, that's as backwards as it gets. Shed the healthy leaves and keep the dying ones? Chale, even the tree knows better.
+To a six-year-old, that's as backwards as it gets. Shed the healthy leaves and keep the dying ones? Chale, even the trees know better.
 
 ## It's the same thing underneath
 
