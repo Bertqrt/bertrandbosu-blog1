@@ -6,7 +6,7 @@ excerpt: "New ideas die young. Old habits somehow don't."
 written_with: "Matthea"
 ---
 
-When I was about six, my mom and I were standing in a line, waiting for something. I don't even remember what. There was a tree nearby dropping its leaves, and I asked her: *"Why do the green leaves fall too? Shouldn't it be only the brown ones?"*
+When I was about six, my mom and I were standing in a line, waiting for something. I don't even remember what. There was a tree nearby shedding its leaves, and I asked her: *"Why do the green leaves fall too? Shouldn't it be only the brown ones?"*
 
 I don't remember asking it either. My mom is the one who tells the story. Apparently a man standing next to us in the line heard me and said it was a very deep question. I'm pretty sure I just meant the leaves.
 
