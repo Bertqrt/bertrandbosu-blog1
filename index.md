@@ -44,7 +44,7 @@ I'm Bert. I study computer engineering at UG and spend way too much time messing
     </p>
     <div class="entry-header">
       <h2>{{ post.title }}</h2>
-      {% if post.image and post.image != '/assets/images/og-default.png' %}
+      {% if post.image and post.image != '/assets/images/og-share.png' %}
       <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="entry-thumb" loading="lazy">
       {% endif %}
     </div>
