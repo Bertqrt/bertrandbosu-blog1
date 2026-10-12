@@ -30,11 +30,37 @@ I already wrote about the first one in [The fear of starting]({{ site.baseurl }}
 
 The second one is sneakier. Someone tells you their plan, and before they've even finished you're listing why it won't work. *That's been done before. Where will you get the money? Be serious.* It feels like being realistic. Most of the time, the idea is just new and we don't know what to do with it.
 
-[YOUR GREEN IDEA: one idea of yours, or one you shot down for someone else, that died young. A few honest lines.]
+I've done it to my own ideas plenty. A life-sim game set in Ghana, something like Lagos Life. Properly learning full-stack web dev, frontend and backend. Both are still sitting in my head, green and untouched. The one I actually let grow was a `/study` command for my Telegram bot that pulls answers from my own study material. It's only a prototype, but it exists, and it only exists because I didn't cut it early.
+
+## And we keep the brown ones
+
+And while we're busy cutting the green leaves, we're holding on to the brown ones for dear life.
+
+Old habits. Old ways of thinking. Patterns we can clearly see aren't good for us, but we still give them room.
+
+Mine is sticking to what I already know. Almost everything I build runs on an Arduino or an ESP32: a smart waste bin, an RFID access lock with an MFRC522. The moment something needs a Raspberry Pi, like the OCR reading wand I want to make, I quietly push it aside, because I don't know how to use one. Arduinos aren't bad. They're just familiar, and that's exactly why I keep reaching for them.
+
+To a six-year-old, that's as backwards as it gets. Drop the healthy leaves and keep the dying ones? Chale, even the tree knows better.
+
+## It's the same thing underneath
+
+Fear and doubt feel like two different things, but I don't think they are. Underneath both, **we just don't like not knowing.**
+
+A new idea, yours or someone else's, comes with no guarantee. You can't tell if it'll work. The old habit, as bad as it is, is familiar. You already know what it costs you. So we pick the familiar thing, even when it's dying.
+
+A <a href="https://www.psychologicalscience.org/news/releases/is-there-a-hidden-bias-against-creativity.html" target="_blank" rel="noopener">2012 study</a> found something close to this. People said they valued creative ideas, but when they felt uncertain, they quietly preferred the practical, familiar ones. The uncertainty even made them worse at recognizing a creative idea when they saw one.
+
+## Noticing is most of it
+
+A six-year-old saw this from one tree while standing in a line, so it's not exactly hidden. We just stop looking.
+
+What I'm trying now is small. When a friend tells me an idea, I ask one question about how it could work before I say anything about why it won't. When an idea of my own shows up, I write it down instead of killing it in my head that same night. Most of them won't survive anyway, and that's fine. At least they'll fall after a fair chance, not because I couldn't handle not knowing.
+
+The brown leaf is harder. I haven't dropped mine yet. But I've stopped pretending it's still green, and I think that's where letting go starts.
 
 ## Matthea's side of it
 
-I talked this through with my friend Matthea, and she wrote something about the green leaves that I couldn't say better myself, so here it is in her words:
+I talked all of this through with my friend Matthea, and she wrote something about the green leaves that I couldn't say better myself. So she gets the last word, in her own words:
 
 > Green leaves fall too.
 >
@@ -60,32 +86,6 @@ I talked this through with my friend Matthea, and she wrote something about the 
 >
 > Health, hope, home.
 {: .guest-piece}
-
-## And we keep the brown ones
-
-And while we're busy cutting the green leaves, we're holding on to the brown ones for dear life.
-
-Old habits. Old ways of thinking. Patterns we can clearly see aren't good for us, but we still give them room.
-
-[YOUR BROWN LEAF: one old habit or mindset you know isn't healthy but still hold on to. This is the hardest part to write and the most important.]
-
-To a six-year-old, that's as backwards as it gets. Drop the healthy leaves and keep the dying ones? Chale, even the tree knows better.
-
-## It's the same thing underneath
-
-Fear and doubt feel like two different things, but I don't think they are. Underneath both, **we just don't like not knowing.**
-
-A new idea, yours or someone else's, comes with no guarantee. You can't tell if it'll work. The old habit, as bad as it is, is familiar. You already know what it costs you. So we pick the familiar thing, even when it's dying.
-
-A <a href="https://www.psychologicalscience.org/news/releases/is-there-a-hidden-bias-against-creativity.html" target="_blank" rel="noopener">2012 study</a> found something close to this. People said they valued creative ideas, but when they felt uncertain, they quietly preferred the practical, familiar ones. The uncertainty even made them worse at recognizing a creative idea when they saw one.
-
-## Noticing is most of it
-
-A six-year-old saw this from one tree while standing in a line, so it's not exactly hidden. We just stop looking.
-
-What I'm trying now is small. When a friend tells me an idea, I ask one question about how it could work before I say anything about why it won't. When an idea of my own shows up, I write it down instead of killing it in my head that same night. Most of them won't survive anyway, and that's fine. At least they'll fall after a fair chance, not because I couldn't handle not knowing.
-
-The brown leaf is harder. I haven't dropped mine yet. But I've stopped pretending it's still green, and I think that's where letting go starts.
 
 > What's one green leaf when there are millions more?<br>It's still one green leaf either way.
 >
