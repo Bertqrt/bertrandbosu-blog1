@@ -10,7 +10,7 @@ When I was about six, my mom and I were standing in a line, waiting for somethin
 
 I don't remember asking it either. My mom is the one who tells the story. Apparently a man standing next to us in the line heard me and said it was a very deep question. I'm pretty sure I just meant the leaves.
 
-But that question has been sitting in my head lately, and I think six-year-old me was onto something. Just not about trees.
+But that question has been sitting in my head lately, and I think six-year-old me was onto something, just not about trees.
 
 ## The tree has a reason
 
@@ -22,11 +22,11 @@ We do the same thing with ideas. Except most of the time, we don't have a reason
 
 ## We cut the green ones
 
-Think about how many ideas die before they even get a chance. They're still budding, still growing, and someone shoots them down. Sometimes that someone is us.
+Think about how many ideas die before they even get a chance. They're still budding, still growing, then someone shoots them down. Sometimes that someone is us.
 
 **I think we kill our own ideas out of fear, and other people's out of doubt.**
 
-I already wrote about the first one in [The fear of starting]({{ site.baseurl }}{% post_url 2026-09-29-the-fear-of-starting %}). You want to start something, a voice says *what if you mess it up?*, and the idea dies right there in your head.
+I already wrote about the first one in [The fear of starting]({{ site.baseurl }}{% post_url 2026-09-29-the-fear-of-starting %}). You want to start something, a voice asks *what if you mess it up?*, and the idea dies right there in your head.
 
 The second one is sneakier. Someone tells you their plan, and before they've even finished you're listing why it won't work. *That's been done before. Where will you get the money? Be serious.* It feels like being realistic. Most of the time, the idea is just new and we don't know what to do with it.
 
