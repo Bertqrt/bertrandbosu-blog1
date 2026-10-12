@@ -49,6 +49,7 @@ I'm Bert. I study computer engineering at UG and spend way too much time messing
       {% endif %}
     </div>
     <p class="hook">{{ post.excerpt | strip_html }}</p>
+    {% if post.written_with %}<p class="written-with">Written with a friend, {{ post.written_with }}</p>{% endif %}
   </a>
   {% endfor %}
 </div>
