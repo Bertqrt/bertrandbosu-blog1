@@ -39,8 +39,8 @@ I'm Bert. I study computer engineering at UG and spend way too much time messing
     {% assign words = post.content | strip_html | number_of_words %}
     {% assign read_time = words | divided_by: 200 | at_least: 1 %}
     <p class="meta">
+      {% if forloop.first %}<span class="new-dot" data-date="{{ post.date | date_to_xmlschema }}" role="img" aria-label="New post" title="New post"></span>{% endif %}
       {{ read_time }} min &middot; {{ post.date | date: "%b %-d, %Y" }}
-      {% if forloop.first %}<span class="new-label" data-date="{{ post.date | date_to_xmlschema }}">New</span>{% endif %}
     </p>
     <div class="entry-header">
       <h2>{{ post.title }}</h2>
@@ -55,9 +55,9 @@ I'm Bert. I study computer engineering at UG and spend way too much time messing
 </div>
 
 <script>
-  // Show "New" on the latest post for 3 days after its date.
+  // Show the new-post dot on the latest post for 3 days after its date.
   var NEW_LABEL_DAYS = 3;
-  document.querySelectorAll('.new-label').forEach(function (label) {
+  document.querySelectorAll('.new-dot').forEach(function (label) {
     var postDate = new Date(label.dataset.date);
     var daysSince = (Date.now() - postDate) / (1000 * 60 * 60 * 24);
     if (daysSince > NEW_LABEL_DAYS) {
