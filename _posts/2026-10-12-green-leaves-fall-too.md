@@ -87,7 +87,7 @@ A <a href="https://www.psychologicalscience.org/news/releases/is-there-a-hidden-
 
 A six-year-old saw this from one tree while standing in a line, so it's not exactly hidden. We just stop looking.
 
-What I'm trying now is small. When a friend tells me an idea, I ask one question about how it could work before I say anything about why it won't. When an idea of my own shows up, I write it down instead of killing it in my head that same night. Most of them won't survive anyway, and that's fine. At least they'll fall after a fair chance, instead of ending up as one of Matthea's *what-could-have-beens*.
+What I try to do now is small. When a friend tells me an idea, I ask questions about it. How it works, who it's for, where it could go. I'm not hunting for what's wrong with it. I'm looking for where it could get better. When an idea of my own shows up, I write it down instead of killing it in my head that same night. Most of them won't survive anyway, and that's fine. At least they'll fall after a fair chance, instead of ending up as one of Matthea's *what-could-have-beens*.
 
 The brown leaf is harder. I haven't dropped mine yet. But I've stopped pretending it's still green, and I think that's where letting go starts.
 
