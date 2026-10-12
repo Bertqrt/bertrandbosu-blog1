@@ -14,7 +14,7 @@ But that question has been sitting in my head lately, and I think six-year-old m
 
 ## The tree has a reason
 
-Green leaves really do fall, and sometimes the tree drops them on purpose. In a drought, every leaf is losing water into the air, and the tree can't afford to keep all of them. So it lets some go, healthy ones included, just to <a href="https://eos.org/editor-highlights/trees-shed-their-leaves-to-adapt-to-droughts" target="_blank" rel="noopener">survive</a>.
+Green leaves really do fall, and sometimes the tree sheds them on purpose. In a drought, every leaf is losing water into the air, and the tree can't afford to keep all of them. So it lets some go, healthy ones included, just to <a href="https://eos.org/editor-highlights/trees-shed-their-leaves-to-adapt-to-droughts" target="_blank" rel="noopener">survive</a>.
 
 So the tree isn't being stupid. It's making a hard call with the little water it has.
 
@@ -73,7 +73,7 @@ Matthea calls them *the many tried and true others*, and some of them really are
 
 Mine is sticking to what I already know. Almost everything I build runs on an Arduino or an ESP32: a smart waste bin, an RFID access lock with an MFRC522. The moment something needs a Raspberry Pi, like the OCR reading wand I want to make, I quietly push it aside, because I don't know how to use one. Arduinos aren't bad. They're just familiar, and that's exactly why I keep reaching for them.
 
-To a six-year-old, that's as backwards as it gets. Drop the healthy leaves and keep the dying ones? Chale, even the tree knows better.
+To a six-year-old, that's as backwards as it gets. Shed the healthy leaves and keep the dying ones? Chale, even the tree knows better.
 
 ## It's the same thing underneath
 
@@ -89,7 +89,7 @@ A six-year-old saw this from one tree while standing in a line, so it's not exac
 
 What I try to do now is small. When a friend tells me an idea, I ask questions about it. How it works, who it's for, where it could go. I'm not hunting for what's wrong with it. I'm looking for where it could get better. When an idea of my own shows up, I write it down instead of killing it in my head that same night. Most of them won't survive anyway, and that's fine. At least they'll fall after a fair chance, instead of ending up as one of Matthea's *what-could-have-beens*.
 
-The brown leaf is harder. I haven't dropped mine yet. But I've stopped pretending it's still green, and I think that's where letting go starts.
+The brown leaf is harder. I haven't shed mine yet. But I've stopped pretending it's still green, and I think that's where letting go starts.
 
 > What's one green leaf when there are millions more?<br>It's still one green leaf either way.
 >
